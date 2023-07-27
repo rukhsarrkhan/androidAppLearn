@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.secondproject.MainFragment"
+        android:name="com.example.secondproject.view.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.secondproject.SecondFragment"
+        android:name="com.example.secondproject.view.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.secondproject.ThirdFragment"
+        android:name="com.example.secondproject.view.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" >
         <action
@@ -53,12 +53,12 @@
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
-        android:name="com.example.secondproject.FourthFragment"
+        android:name="com.example.secondproject.view.FourthFragment"
         android:label="fragment_fourth"
         tools:layout="@layout/fragment_fourth" />
     <fragment
         android:id="@+id/youMatterFragment"
-        android:name="com.example.secondproject.YouMatterFragment"
+        android:name="com.example.secondproject.view.YouMatterFragment"
         android:label="YouMatterFragment"
         tools:layout="@layout/fragment_you_matter"/>
 </navigation>

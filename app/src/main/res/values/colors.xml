@@ -2,8 +2,14 @@
 <resources>
 
     <color name="neutral1">#363636</color>
+    <color name="neutral2">#636363</color>
+    <color name="neutral3">#969696</color>
     <color name="consult">#F16495</color>
     <color name="assessment">#80A684</color>
+    <color name="primary2">#F16495</color>
+    <color name="cta1">#80A684</color>
+    <color name="Secondary1">#E89A91</color>
+
 
     <color name="colorPrimary">@color/primary_green</color>
     <color name="colorSecondary">@color/primary_green</color>

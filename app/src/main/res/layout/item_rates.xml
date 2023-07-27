@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_rates_parameter"
+    android:layout_width="@dimen/_103sdp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    android:layout_margin="@dimen/_3sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_parameter"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:background="@drawable/reactangle_pink"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/heart_rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_parameter"
+            style="@style/ScanLevels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure"
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@+id/img_parameter"
+            app:layout_constraintTop_toTopOf="@+id/img_parameter"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_parameter_value"
+            style="@style/ScanLevelsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="99 bpm"
+            app:layout_constraintEnd_toEndOf="@+id/txt_parameter"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_parameter"
+            app:layout_constraintTop_toBottomOf="@+id/txt_parameter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

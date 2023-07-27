@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingStart="@dimen/_6sdp"
-    android:paddingEnd="@dimen/_6sdp"
-   >
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_162sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_illustration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
@@ -22,9 +36,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
-            android:paddingBottom="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,60 +46,69 @@
                 android:id="@+id/txtUserName"
                 style="@style/YouMatterTitle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"
                 android:ellipsize="end"
                 android:text="Hi Ashish!"
                 android:textColor="@color/neutral1"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_18sdp"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txtWelcomeText"
-                style="@style/VivantDescription"
+                style="@style/YouMatterDescription"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_16sdp"
                 android:ellipsize="end"
+                android:gravity="center_vertical"
                 android:text="How are you feeling today?"
                 android:textColor="@color/neutral1"
-                android:textSize="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txtUserName"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_steps"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
                 android:layout_marginEnd="@dimen/_6sdp"
-                android:visibility="visible"
-                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_weight="0.5"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:cardCornerRadius="@dimen/_8sdp"
                 app:cardElevation="@dimen/card_elevation"
                 app:layout_constraintEnd_toStartOf="@+id/card_calories"
-                app:layout_constraintHorizontal_weight="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtWelcomeText">
+                app:layout_constraintTop_toBottomOf="@+id/txtWelcomeText"
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_steps"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_60sdp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="#FFFFFF">
-
+                    android:layout_height="@dimen/_76sdp"
+                    android:background="#FFFFFF"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_steps"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
-                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:gravity="center_vertical"
                         android:src="@drawable/footsteps"
                         android:tint="@color/consult"
                         app:layout_constraintStart_toStartOf="parent"
@@ -95,37 +116,39 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/lbl_steps"
-                        style="@style/VivantTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/CardOneTitle"
+                        android:layout_width="@dimen/_72sdp"
+                        android:layout_height="@dimen/_20sdp"
                         android:layout_marginStart="@dimen/_6sdp"
+                        android:gravity="center_vertical"
                         android:text="Steps Walked"
-                        android:textSize="@dimen/_11sdp"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintBottom_toBottomOf="@+id/img_steps"
                         app:layout_constraintStart_toEndOf="@+id/img_steps"
                         app:layout_constraintTop_toTopOf="@+id/img_steps" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_step_count"
-                        style="@style/VivantTitle"
+                        style="@style/CardOneData1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="---"
-                        android:textSize="@dimen/_14sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="4,212 "
+                        android:textSize="@dimen/_16sdp"
                         app:layout_constraintStart_toStartOf="@+id/lbl_steps"
                         app:layout_constraintTop_toBottomOf="@+id/lbl_steps" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_step_goal"
-                        style="@style/VivantDescription"
+                        style="@style/CardOneData2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" / ---"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="@dimen/_11sdp"
-                        app:layout_constraintBottom_toBottomOf="@+id/txt_step_count"
-                        app:layout_constraintStart_toEndOf="@+id/txt_step_count" />
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="bottom"
+                        android:text=" / 5000"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_step_count"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_steps" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -135,65 +158,73 @@
                 android:id="@+id/card_calories"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:visibility="visible"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
-                app:layout_constraintBottom_toBottomOf="@+id/card_steps"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_weight="0.5"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:layout_weight="0.5"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/card_steps"
-                app:layout_constraintTop_toTopOf="@+id/card_steps">
+                app:layout_constraintTop_toTopOf="@+id/card_steps"
+                app:layout_constraintBottom_toBottomOf="@+id/card_steps">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_calories"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="#FFFFFF">
+                    android:background="#FFFFFF"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_calories"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:src="@drawable/calories_burnt"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/calories"
                         android:tint="@color/consult"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/lbl_calories"
-                        style="@style/VivantTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/CardOneTitle"
+                        android:layout_width="@dimen/_86sdp"
+                        android:layout_height="@dimen/_20sdp"
                         android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:gravity="center_vertical"
                         android:text="Calories Burned"
-                        android:textSize="@dimen/_11sdp"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintBottom_toBottomOf="@+id/img_calories"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/img_calories"
                         app:layout_constraintTop_toTopOf="@+id/img_calories" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_calories_count"
-                        style="@style/VivantTitle"
+                        style="@style/CardOneData1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="---"
-                        android:textSize="@dimen/_14sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="432 "
+                        android:textSize="@dimen/_16sdp"
                         app:layout_constraintStart_toStartOf="@+id/lbl_calories"
                         app:layout_constraintTop_toBottomOf="@+id/lbl_calories" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_calories_goal"
-                        style="@style/VivantDescription"
+                        style="@style/CardOneData2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" / ---"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="@dimen/_11sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="bottom"
+                        android:text=" / 480"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintBottom_toBottomOf="@+id/txt_calories_count"
                         app:layout_constraintStart_toEndOf="@+id/txt_calories_count" />
 
@@ -205,38 +236,55 @@
                 android:id="@+id/card_scan_vitals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardPreventCornerOverlap="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card_calories"
-                android:background="@color/white"
-                app:cardPreventCornerOverlap="false"
-
-                >
+                app:layout_constraintTop_toBottomOf="@+id/card_calories">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/scanlayout"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
-                    android:layout_height="144dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@color/white">
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
 
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:src="@drawable/background_blue_oval"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.03"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_165sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/hand_with_heart"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txtCheckVitals"
-                        style="@style/VivantTitle"
-                        android:layout_width="@dimen/_121sdp"
+                        style="@style/CardTwoTitle"
+                        android:layout_width="@dimen/_106sdp"
                         android:layout_height="@dimen/_17sdp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
                         android:ellipsize="start"
                         android:text="Check your vitals"
                         android:textColor="@color/neutral1"
-                        android:textSize="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
                         android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -245,43 +293,158 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txtScanDescription"
-                        style="@style/VivantDescription"
+                        style="@style/YouMatterDescription"
                         android:layout_width="@dimen/_185sdp"
                         android:layout_height="@dimen/_42sdp"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
                         android:ellipsize="end"
                         android:text="Scan your vitals to get quick report on your overall mental health powered by Wellfie."
                         android:textColor="@color/neutral1"
-                        android:textSize="@dimen/_10sdp"
-                        android:visibility="visible"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="@id/txtCheckVitals"
-                        app:layout_constraintHorizontal_bias="0.333"
-                        app:layout_constraintStart_toStartOf="@+id/txtCheckVitals"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtCheckVitals" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/scanButton"
                         android:layout_width="@dimen/_92sdp"
                         android:layout_height="@dimen/_29sdp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
                         android:background="@drawable/button_green"
                         android:text="Scan now"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@id/txtScanDescription"
-                        app:layout_constraintHorizontal_bias="0.104"
+                        app:layout_constraintHorizontal_bias="0.013"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtScanDescription"
-                        app:layout_constraintVertical_bias="0.0">
+                        app:layout_constraintVertical_bias="0.096">
 
                     </androidx.appcompat.widget.AppCompatButton>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scanlayoutData"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
 
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/scan_image"
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_86sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:src="@drawable/scan_vitals_after"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/oxygen_level"
+                        style="@style/ScanLevels"
+                        android:layout_width="@dimen/_68sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginLeft="@dimen/_122sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:ellipsize="start"
+                        android:text="Oxygen level"
+                        android:gravity="center_vertical"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/oxygen_level_data"
+                        style="@style/ScanLevelsData"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:ellipsize="start"
+                        android:gravity="center_vertical"
+                        android:text="97%"
+                        app:layout_constraintBottom_toTopOf="@+id/stress_level"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/oxygen_level"
+                        app:layout_constraintTop_toTopOf="@+id/oxygen_level" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/stress_level"
+                        style="@style/ScanLevels"
+                        android:layout_width="@dimen/_59sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:ellipsize="end"
+                        android:text="Stress level"
+                        app:layout_constraintStart_toStartOf="@+id/oxygen_level"
+                        app:layout_constraintTop_toBottomOf="@+id/oxygen_level" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/stress_level_data"
+                        style="@style/ScanLevelsData"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:ellipsize="start"
+                        android:gravity="center_vertical"
+                        android:text="Normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/stress_level"
+                        app:layout_constraintTop_toBottomOf="@+id/oxygen_level_data" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rescanButton"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        android:background="@drawable/button_green"
+                        android:text="Rescan your vitals"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintHorizontal_bias="0.013"
+                        app:layout_constraintStart_toStartOf="@+id/stress_level"
+                        app:layout_constraintTop_toBottomOf="@+id/stress_level"
+                        app:layout_constraintVertical_bias="0.096">
+
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/line_break"
+                        android:layout_width="@dimen/_298sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:src="@drawable/line"
+                        app:layout_constraintBottom_toTopOf="@id/rv_rates"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/rescanButton" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_rates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line_break"
+                        app:spanCount="2"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_rates" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -289,11 +452,11 @@
                 android:id="@+id/card_consult_therapist"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"
                 android:layout_marginEnd="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:layout_weight="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/card_hra"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_scan_vitals">
@@ -302,37 +465,36 @@
                     android:id="@+id/layout_consult_therapist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@drawable/pink_bg">
+                    android:background="@drawable/pink_bg"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/lbl_consult_therapist"
-                        style="@style/VivantTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:layout_marginBottom="49dp"
-                        android:gravity="center"
-                        android:text="Consult with Mental\nHealth Professional"
-                        android:textSize="@dimen/_11sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="@dimen/_113sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:text="Consult a Mental Health Professional"
+                        android:textColor="@color/white"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="@dimen/_70sdp"
-                        android:layout_height="@dimen/_20sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/lbl_consult_therapist"
+                        android:layout_width="@dimen/_82sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
                         android:background="@drawable/button_pink"
                         android:text="Get Started"
                         android:textAllCaps="false"
-                        android:textColor="@color/white">
+                        android:textColor="@color/white"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_consult_therapist"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_consult_therapist">
 
                     </androidx.appcompat.widget.AppCompatButton>
 
@@ -343,11 +505,11 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_hra"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
                 android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/card_consult_therapist"
                 app:layout_constraintTop_toTopOf="@+id/card_consult_therapist"
@@ -357,43 +519,64 @@
                     android:id="@+id/layout_hra_start"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="visible"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@drawable/green_bg">
+                    android:background="@drawable/green_bg"
+                    android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/wellness_score"
-                        style="@style/VivantTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:layout_marginBottom="40dp"
-                        android:gravity="center"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
                         android:text="Take a health risk assessment Test"
-                        android:textSize="@dimen/_11sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="@color/white"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="@dimen/_70sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:layout_width="@dimen/_82sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/button_forest"
+                        android:text="Get Started"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/wellness_score"
+                        app:layout_constraintTop_toBottomOf="@+id/wellness_score" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/progress_circle"
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
+                        android:src="@drawable/progress"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/wellness_score"
-                        android:background="@drawable/button_forest"
-                        android:textAllCaps="false"
-                        android:text="Get Started"
-                        android:textColor="@color/white"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
 
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/wellness_score_percentage"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_19sdp"
+                        android:text="97%"
+                        android:textColor="@color/white"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/progress_circle"
+                        app:layout_constraintEnd_toEndOf="@+id/progress_circle" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
             </androidx.cardview.widget.CardView>
 
@@ -401,33 +584,76 @@
                 android:id="@+id/layout_smit_fit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_11sdp"
-                app:layout_constraintEnd_toStartOf="@+id/card_hra"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_consult_therapist">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lbl_smit_fit_title"
-                    style="@style/VivantTitle"
+                    style="@style/YouMatterTitle"
+                    android:layout_marginLeft="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="What are you looking for?"
-                    android:textSize="@dimen/_13sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textSize="@dimen/_18sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_smit_fit"
+                    android:id="@+id/rv_exercises"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_exercise"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lbl_smit_fit_title" />
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_smit_fit_title"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_live_sessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_smit_fit">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_live_sessions"
+                    style="@style/YouMatterTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="4dp"
+                    android:text="Curated for you"
+                    android:textSize="@dimen/_18sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sessions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_live_sessions"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

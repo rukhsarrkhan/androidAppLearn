@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_live_session_1"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="@dimen/_240sdp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_20sdp"
+    app:cardElevation="@dimen/card_elevation"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_calender"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center_vertical"
+            android:src="@drawable/live_streaming"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_live_session_date"
+            style="@style/VivantDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="On Going"
+            android:textColor="@color/primary2"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_calender"
+            app:layout_constraintStart_toEndOf="@+id/img_calender"
+            app:layout_constraintTop_toTopOf="@+id/img_calender" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/live_sign"
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:gravity="center_vertical"
+            android:src="@drawable/live"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_live_session_date"
+            app:layout_constraintStart_toEndOf="@+id/txt_live_session_date"
+            app:layout_constraintTop_toTopOf="@+id/txt_live_session_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_live_session_name"
+            style="@style/VivantTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:minLines="2"
+            android:text="Yoga\nSession"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/img_calender"
+            app:layout_constraintTop_toBottomOf="@+id/txt_live_session_date" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_live_session"
+            android:layout_width="@dimen/_84sdp"
+            android:layout_height="@dimen/_111sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/yoga_session"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_live_session_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/join_button"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/button_green"
+            android:text="Join now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
